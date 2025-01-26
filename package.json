@@ -1,5 +1,5 @@
 {
-  "name": "svelte-email",
+  "name": "@keycloakify/svelte-email",
   "version": "0.0.4",
   "description": "Build emails with Svelte",
   "type": "module",
@@ -9,8 +9,6 @@
   "scripts": {
     "dev": "vite dev",
     "build": "svelte-kit sync && svelte-package",
-    "docs:build": "svelte-kit sync && vite build",
-    "prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "_format": "prettier '**/*.{ts,html,json,md,svelte}'",
@@ -48,7 +46,10 @@
     "svelte": "^5.19.3"
   },
   "files": [
-    "dist"
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
   ],
   "exports": {
     ".": {
