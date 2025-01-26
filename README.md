@@ -33,18 +33,16 @@ pnpm install svelte-email
 
 ```html
 <script>
-	import { Button, Hr, Html, Text } from 'svelte-email';
+  import { Button, Hr, Html, Text } from 'svelte-email';
 
-	export let name = 'World';
+  export let name = 'World';
 </script>
 
-<Html lang="en">
-	<Text>
-		Hello, {name}!
-	</Text>
-	<Hr />
-	<Button href="https://svelte.dev">Visit Svelte</Button>
-</Html>
+<html lang="en">
+  <Text> Hello, {name}! </Text>
+  <hr />
+  <button href="https://svelte.dev">Visit Svelte</button>
+</html>
 ```
 
 ## 2. Send email
@@ -59,27 +57,27 @@ import Hello from '$lib/emails/Hello.svelte';
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-	host: 'smtp.ethereal.email',
-	port: 587,
-	secure: false,
-	auth: {
-		user: 'my_user',
-		pass: 'my_password'
-	}
+  host: 'smtp.ethereal.email',
+  port: 587,
+  secure: false,
+  auth: {
+    user: 'my_user',
+    pass: 'my_password',
+  },
 });
 
 const emailHtml = render({
-	template: Hello,
-	props: {
-		name: 'Svelte'
-	}
+  template: Hello,
+  props: {
+    name: 'Svelte',
+  },
 });
 
 const options = {
-	from: 'you@example.com',
-	to: 'user@gmail.com',
-	subject: 'hello world',
-	html: emailHtml
+  from: 'you@example.com',
+  to: 'user@gmail.com',
+  subject: 'hello world',
+  html: emailHtml,
 };
 
 transporter.sendMail(options);

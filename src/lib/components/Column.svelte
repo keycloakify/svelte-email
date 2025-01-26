@@ -1,27 +1,26 @@
 <script lang="ts">
-	import type {
-		StandardLonghandProperties,
-		StandardProperties,
-		StandardShorthandProperties
-	} from 'csstype';
-	import { styleToString } from '$lib/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
-	interface $$Props extends Omit<HTMLAttributes<HTMLTableCellElement>, 'style'> {
-		style?: StandardLonghandProperties & StandardProperties & StandardShorthandProperties;
-	}
+  import type { HTMLAttributes } from 'svelte/elements';
+  import { styleToString } from '../utils';
+  interface Props extends Omit<HTMLAttributes<HTMLTableCellElement>, 'style'> {
+    style?: Record<string, string | number | null>;
+  }
 
-	export let style: $$Props['style'] = {};
-	let className: string | undefined = undefined;
-	export { className as class };
+  let { style = {}, class: className, children, ...rest }: Props = $props();
 
-	const styleDefault = {
-		display: 'inline-flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		...style
-	};
+  const styleDefault = {
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    ...style,
+  };
 </script>
 
-<td style={styleToString(styleDefault)} role="presentation" {...$$restProps} class={className}>
-	<slot />
+<!-- svelte-ignore a11y_no_interactive_element_to_noninteractive_role -->
+<td
+  style={styleToString(styleDefault)}
+  role="presentation"
+  {...rest}
+  class={className}
+>
+  {@render children?.()}
 </td>
