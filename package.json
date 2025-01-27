@@ -1,10 +1,11 @@
 {
   "name": "@keycloakify/svelte-email",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Build emails with Svelte",
   "type": "module",
   "author": {
-    "name": "Carsten Lebek"
+    "name": "Luca Peruzzo",
+    "email": "peruzzoluca98@gmail.com"
   },
   "scripts": {
     "dev": "vite dev",

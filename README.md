@@ -6,23 +6,25 @@
 <div align="center">
 <a href="https://svelte-email.vercel.app/">Documentation</a> 
 <span> · </span>
-<a href="https://github.com/carstenlebek/svelte-email">GitHub</a> 
+<a href="https://github.com/keycloakify/svelte-email">GitHub</a> 
 </div>
 
 # Introduction
 
-After seeing [react-email](https://github.com/resendlabs/react-email) I have decided to create a similar library for Svelte. `svelte-email` enables you to write and design email templates with svelte and render them to HTML or plain text.
+This is a fork of <a href="https://github.com/carstenlebek/svelte-email">Carsten Lebek's Svelte Email project</a>.
+
+`svelte-email` enables you to write and design email templates with svelte and render them to HTML or plain text.
 
 # Installation
 
 Install the package to your existing SvelteKit project:
 
 ```bash title="npm"
-npm install svelte-email
+npm install @keycloakify/svelte-email
 ```
 
-```bash title="pnpm"
-pnpm install svelte-email
+```bash title="yarn"
+yarn install @keycloakify/svelte-email
 ```
 
 # Getting started
@@ -116,9 +118,8 @@ Emails built with React Email can be converted into HTML and sent using any emai
 
 ## Author
 
+- Luca Peruzzo ([@luca-peruzzo](https://github.com/luca-peruzzo))
+
+### Authors of the original project [svelte-email](https://github.com/keycloakify/svelte-email)
+
 - Carsten Lebek ([@carstenlebek](https://twitter.com/carstenlebek1))
-
-### Authors of the original project [react-email](https://github.com/resendlabs/react-email)
-
-- Bu Kinoshita ([@bukinoshita](https://twitter.com/bukinoshita))
-- Zeno Rocha ([@zenorocha](https://twitter.com/zenorocha))
