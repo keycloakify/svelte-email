@@ -3,9 +3,22 @@
   "version": "0.0.5",
   "description": "Build emails with Svelte",
   "type": "module",
+  "keywords": [
+    "svelte",
+    "keycloakify",
+    "email"
+  ],
   "author": {
     "name": "Luca Peruzzo",
     "email": "peruzzoluca98@gmail.com"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keycloakify/svelte-email.git"
   },
   "scripts": {
     "dev": "vite dev",
@@ -35,6 +48,7 @@
     "npm-check-updates": "^17.1.14",
     "prettier": "^3.4.2",
     "prettier-plugin-svelte": "^3.3.3",
+    "svelte": "^5.19.3",
     "svelte-check": "^4.1.4",
     "tslib": "^2.8.1",
     "typescript": "^5.7.3",
@@ -43,8 +57,10 @@
   },
   "dependencies": {
     "html-to-text": "^9.0.5",
-    "pretty": "^2.0.0",
-    "svelte": "^5.19.3"
+    "pretty": "^2.0.0"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
   },
   "files": [
     "dist",
